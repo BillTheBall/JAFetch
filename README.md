@@ -1,6 +1,6 @@
 # Just Another Fetch (JAFetch)
-This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function. 
-
+This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function. <br>
+ ![JAFetch Working](pictures/githubJAFetch.png)
 ## INSTALLATION
 ### Requirements
 To check, just run the name of the`~program --help` as long as it doesn't return command not found you should be fine!
