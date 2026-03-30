@@ -1,0 +1,17 @@
+{
+  "bios": true,
+  "cpu": true,
+  "disk": true,
+  "gpu": true,
+  "init": true,
+  "ip": true,
+  "memory": true,
+  "motherboard": true,
+  "os": false,
+  "kernel": false,
+  "resolution": true,
+  "terminal": true,
+  "uptime": true,
+  "windowmanager": true
+}
+
