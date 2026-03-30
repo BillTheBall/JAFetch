@@ -5,7 +5,8 @@ import (
 	"encoding/json" //Decodes the file
 	"io" //Used to read the file
 	"os" //Used to open the file
-	"fmt" //Used to communicate errors (replacement needed)
+	"fmt" //Used to communicate errors (replacement needed	
+	"path/filepath"
 )
 
 // Contains all the information that can be in the Config
@@ -28,12 +29,19 @@ type Config struct {
 
 //Gets the config file from src/config/config,json
 func GetConfig() []string {
-	jsonFile, err := os.Open("~/.config/JAFetch/config.json")
-	if err != nil {
-		fmt.Println(err)
-	}
+homeDir, err := os.UserHomeDir()
+if err != nil {
+	panic(err)
+}
 
-	defer jsonFile.Close() //Doesn't instantly close it allowing it be read
+configPath := filepath.Join(homeDir, ".config", "JAFetch", "config.json")
+
+jsonFile, err := os.Open(configPath)
+if err != nil {
+	panic(err)
+}
+defer jsonFile.Close()
+
 
 	byteValue, err := io.ReadAll(jsonFile) //Reads the JSON file
 	if err != nil {
