@@ -1,5 +1,5 @@
 # Just Another Fetch (JAFetch)
-This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function. <br>
+This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function only for Linux however. <br>
  ![JAFetch Working](pictures/githubJAFetch.png)
 ## INSTALLATION
 ### Requirements
@@ -11,7 +11,7 @@ To check, just run the name of the`~program --help` as long as it doesn't return
 ### Install
 - `git clone https://github.com/BillTheBall/JAFetch/`
 - `cd JAFetch/`                 (If you want to change config do nvim src/config/config.json since it gives best results when changed before moving)
-- `sudo mv JAFetch /usr/local/bin/ && sudo mkdir ~/.config/JAFetch && sudo mv src/config/config.json ~/.config/JAFetch`
+- `sudo mv JAFetch /usr/local/bin/ && sudo mkdir ~/.config/JAFetch && sudo cp -r src/config/config.json ~/.config/JAFetch`
 
 ## Supports
 - CPU Name 
