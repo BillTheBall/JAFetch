@@ -28,7 +28,7 @@ type Config struct {
 
 //Gets the config file from src/config/config,json
 func GetConfig() []string {
-	jsonFile, err := os.Open("/.config/JAFetch/config.json")
+	jsonFile, err := os.Open("~/.config/JAFetch/config.json")
 	if err != nil {
 		fmt.Println(err)
 	}
