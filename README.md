@@ -1,6 +1,12 @@
 # Just Another Fetch (JAFetch)
+#### Updated: April 3rd 2026
+#### Size: ~10 MiB
 This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function only for Linux however. <br>
  ![JAFetch Working](pictures/githubJAFetch.png)
+
+## UPDATED
+Made the program significantly faster for NVIDIA GPU Users by roughly 20% in my testing, Intel & AMD should be unaffected by these changes.
+
 ## INSTALLATION
 ### Requirements
 To check, just run the name of the`~program --help` as long as it doesn't return command not found you should be fine!
@@ -13,13 +19,23 @@ To check, just run the name of the`~program --help` as long as it doesn't return
 - `cd JAFetch/`                 (If you want to change config do nvim src/config/config.json since it gives best results when changed before moving)
 - `sudo mv JAFetch /usr/local/bin/ && sudo mkdir ~/.config/JAFetch && sudo cp -r src/config/config.json ~/.config/JAFetch`
 
+### Uupdate
+- `rm -rf JAFetch/ && sudo rm -rf /usr/local/bin/JAFetch && sudo rm -rf ~/.config/JAFetch`
+- `git clone https://github.com/BillTheBall/JAFetch/`
+- `cd JAFetch/`
+- `sudo mv JAFetch /usr/local/bin/ && sudo mkdir ~/.config/JAFetch && sudo cp -r src/config/config.json ~/.config/JAFetch`
+  
+### Remove
+- `rm -rf JAFetch/ && sudo rm -rf /usr/local/bin/JAFetch && sudo rm -rf ~/.config/JAFetch`
+
 ## Supports
 - CPU Name 
 - Host Name 
 - OS Name 
 - Memory Usage
 - Uptime
-- GPU name 
+- GPU name
+- GPU Memory Usage
 - Seperate Go files for processes
 - Disk Drive Usage
 - Resolution
