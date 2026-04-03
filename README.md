@@ -18,7 +18,7 @@ To check, just run the name of the`~program --help` as long as it doesn't return
 - `cd JAFetch/`                 (If you want to change config do nvim src/config/config.json since it gives best results when changed before moving)
 - `sudo mv JAFetch /usr/local/bin/ && sudo mkdir ~/.config/JAFetch && sudo cp -r src/config/config.json ~/.config/JAFetch`
 
-### Uupdate
+### Update
 - `rm -rf JAFetch/ && sudo rm -rf /usr/local/bin/JAFetch && sudo rm -rf ~/.config/JAFetch`
 - `git clone https://github.com/BillTheBall/JAFetch/`
 - `cd JAFetch/`
