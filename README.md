@@ -1,6 +1,5 @@
 # Just Another Fetch (JAFetch)
-#### Updated: April 3rd 2026
-#### Size: ~10 MiB
+###### Updated: April 3rd 2026 | Size: ~10 MiB
 This is an application very similar to Neofetch (and later Fastfetch), and was heavily, **heavily** inspired by them so a lot of similarities will be apparent. Just a first project to learn and understand Golang at an actually competent level, it's not the fastest, and not the best, but it does somewhat function only for Linux however. <br>
  ![JAFetch Working](pictures/githubJAFetch.png)
 
