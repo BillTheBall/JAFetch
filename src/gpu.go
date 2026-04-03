@@ -2,21 +2,30 @@ package src
 
 import (
 	"github.com/jaypipes/ghw" //Used to figure out what GPU your using, also really freaking complex
+	"os/exec"
+	"strings"
 )
 
 func GetGpu() string {
-	var cardinfo string   //Used as a generic "" to store the gpu information
-	gpu, err := ghw.GPU() //Creates the gpu viewer
+	var gpuUsed string
+ cmd := exec.Command("nvidia-smi", "--query-gpu=name,memory.used,memory.total", "--format=csv") 	
+output, err := cmd.Output()
 	if err != nil {
-		return ("Error in obtain GPU")
-	}
-
-	for _, card := range gpu.GraphicsCards { //Checks all information about the gpu
-		cardinfo = (card.DeviceInfo.Product.Name[6:] + " ") //Grabs just the part of the slice containing product name skipping 6 useless letters
-	}
-	if cardinfo != "" {
-		return (cardinfo)
+					gpu, err := ghw.GPU()
+			if err != nil {
+				return("Error getting GPU info")
+			}
+			gpuin := 0
+			if len(gpu.GraphicsCards) > 1 {
+				for _, c := range gpu.GraphicsCards {
+					gpuUsed = c.DeviceInfo.Product.Name
+					gpuin++
+				}
+			} else {
+				gpuUsed = gpu.GraphicsCards[0].DeviceInfo.Product.Name
+			}
+			return(gpuUsed)
 	} else {
-		return ("Error in gathering GPU card")
+		return(strings.TrimSpace(string(output)[44:]))
 	}
 }
